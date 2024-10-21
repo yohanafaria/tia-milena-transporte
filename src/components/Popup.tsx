@@ -54,16 +54,6 @@ const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
           exitTime: "",
         });
       })
-      .catch((err) => {
-        console.error("Erro ao enviar o formulário:", err);
-        toast.error("Erro ao enviar o formulário. Tente novamente.", {
-          className: 'toast-error',
-          style: {
-            backgroundColor: '#f44336',
-            color: '#fff',
-          },
-        });
-      });
   };
 
   const closePopup = () => {
