@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { HiMenu, HiX } from "react-icons/hi";
 import { AuthContext } from '../contexts/AuthContext';
 

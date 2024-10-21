@@ -1,4 +1,3 @@
-import React from 'react';
 import Mapa from './Mapa'; 
 
 const Atuacao: React.FC = () => {

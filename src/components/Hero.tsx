@@ -1,4 +1,3 @@
-import React from 'react';
 
 interface HeroProps {
   setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;

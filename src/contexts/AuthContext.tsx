@@ -1,4 +1,3 @@
-import React from "react";
 import { ReactNode, useState, createContext } from "react";
 
 interface AuthContextProps {
