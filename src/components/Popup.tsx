@@ -1,10 +1,12 @@
 import { send } from "@emailjs/browser";
 import { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { ToastContainer, toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 interface PopupProps {
   isOpen: boolean;
-  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>; 
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
@@ -35,15 +37,37 @@ const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
       "6ZynX18ikKvQ2Ny08"
     )
       .then(() => {
-        alert("Formulário enviado com sucesso!");
+        toast.success("Formulário enviado com sucesso!", {
+          className: 'toast-success',
+          style: {
+            backgroundColor: '',
+            color: '#A18DD9',
+          },
+        });
+        setFormData({
+          name: "",
+          email: "",
+          address: "",
+          schoolName: "",
+          phone: "",
+          entryTime: "",
+          exitTime: "",
+        });
       })
       .catch((err) => {
         console.error("Erro ao enviar o formulário:", err);
+        toast.error("Erro ao enviar o formulário. Tente novamente.", {
+          className: 'toast-error',
+          style: {
+            backgroundColor: '#f44336',
+            color: '#fff',
+          },
+        });
       });
   };
 
   const closePopup = () => {
-    setIsOpen(false); // Fechando o popup
+    setIsOpen(false);
   };
 
   return (
@@ -58,7 +82,9 @@ const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
             >
               <AiOutlineClose size={24} />
             </button>
-            <h2 className="text-2xl text-center text-white font-semibold mb-4" style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>Faça já sua pré-matrícula e garanta seu desconto!</h2>
+            <h2 className="text-2xl text-center text-white font-semibold mb-4" style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)" }}>
+              Faça já sua pré-matrícula e garanta seu desconto!
+            </h2>
             <form onSubmit={sendEmail} className="space-y-4">
               <input
                 type="text"
@@ -139,6 +165,16 @@ const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
           </div>
         </div>
       )}
+      <ToastContainer 
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        closeOnClick
+        pauseOnHover
+        draggable
+        pauseOnFocusLoss
+        style={{ width: '300px' }} // Personalizando o estilo do container
+      />
     </>
   );
 };
