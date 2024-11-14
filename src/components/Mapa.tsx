@@ -14,12 +14,12 @@ const Mapa = () => {
     loader.load().then(async (googleMaps) => {
       if (mapRef.current) {
         const map = new googleMaps.maps.Map(mapRef.current, {
-          center: { lat: -23.01220769176777, lng: -43.4600314526614 },
+          center: { lat: -23.04789, lng: -43.40108 },
           zoom: 12, 
         });
 
     
-        const radiusInMeters = 4000; 
+        const radiusInMeters = 9112; 
    
         const circle = new googleMaps.maps.Circle({
           strokeColor: '#FF0000',
@@ -28,7 +28,7 @@ const Mapa = () => {
           fillColor: '#FF0000',
           fillOpacity: 0.35,
           map,
-          center: { lat: -23.01220769176777, lng: -43.4600314526614 }, 
+          center: { lat: -23.04789, lng: -43.40108 }, 
           radius: radiusInMeters, 
         });
 
@@ -40,7 +40,7 @@ const Mapa = () => {
         });
 
         const marker = new Marker({
-          position: { lat: -23.01220769176777, lng: -43.4600314526614 }, 
+          position: { lat: -23.04789, lng: -43.40108 }, 
           map,
           title: 'Centro da Área de Atuação',
         });

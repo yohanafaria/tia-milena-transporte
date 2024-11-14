@@ -8,8 +8,8 @@ const Atuacao: React.FC = () => {
           <div className="w-1/2">
             <ul className="text-purple-800 ml-10 text-xl list-disc list-inside">
               <li>Barra da Tijuca</li>
+              <li>Barra Olímpica</li>
               <li>Recreio</li>
-              <li>Adjacências</li>
             </ul>
           </div>
           <div className="w-1/2 mr-10">

@@ -1,7 +1,7 @@
 
 const Contato: React.FC = () => {
-  const whatsappNumber = "5521966749092"; // Seu número de WhatsApp
-  const instagramLink = "https://www.instagram.com/tiamilenatransporte/"; // Seu link do Instagram
+  const whatsappNumber = "5521966749092";
+  const instagramLink = "https://www.instagram.com/tiamilenatransporte/";
 
   return (
     <div id="contato"
@@ -11,7 +11,7 @@ const Contato: React.FC = () => {
       <section className="max-w-5xl mx-auto p-6 bg-white rounded-lg shadow-xl">
         <h2 className="text-3xl text-purple-800 px-10 font-bold mb-4 text-center">Fale com a gente!</h2>
         <div className="flex flex-col md:flex-row items-center justify-between space-y-4 md:space-y-0">
-          {/* Coluna com os ícones */}
+  
           <div className="ml-16 flex flex-col space-y-4">
             <div className="flex items-center space-x-2">
               <a
@@ -47,7 +47,6 @@ const Contato: React.FC = () => {
             </div>
           </div>
 
-          {/* Coluna com o QR Code */}
           <div className="mr-16 flex flex-col items-center">
             <img src="/qrcode.JPG" alt="QR Code" className="w-32 h-32" />
             <h3 className="text-lg text-purple-800 font-semibold mb-2 text-center">... Ou escaneie nosso QR Code</h3>
