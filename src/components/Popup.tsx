@@ -31,10 +31,10 @@ const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
     e.preventDefault();
 
     send(
-      "service_cn1r5eb",
-      "template_dcrffkb",
+      "service_1s1kf96",
+      "template_018yf34",
       formData,
-      "6ZynX18ikKvQ2Ny08"
+      "kVejA4v1trqytkbE_"
     )
       .then(() => {
         toast.success("Formulário enviado com sucesso!", {
