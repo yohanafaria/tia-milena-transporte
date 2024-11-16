@@ -95,7 +95,7 @@ const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
                 required
               />
               <input
-                type="tel"
+                type="text"
                 name="phone"
                 placeholder="Telefone"
                 className="w-full p-2 border rounded border-2 border-yellow-500"
