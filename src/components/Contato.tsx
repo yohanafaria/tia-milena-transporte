@@ -25,9 +25,14 @@ const Contato: React.FC = () => {
                   className="w-10 h-10 hover:shadow-xl"
                 />
               </a>
-              <span className="text-lg text-purple-600 hover:text-green-800 transition">
-                (21) 96674-9092
-              </span>
+              <div className="text-lg text-purple-600 hover:text-green-800 transition">
+              <a
+                href={`https://wa.me/${whatsappNumber}`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                (21) 96674-9092 </a>
+              </div>
             </div>
             <div className="flex items-center space-x-2">
               <a
@@ -41,9 +46,14 @@ const Contato: React.FC = () => {
                   className="w-10 h-10 hover:shadow-xl" 
                 />
               </a>
-              <span className="text-lg text-purple-600 hover:text-pink-800 transition">
-                @tiamilenatransporte
-              </span>
+              <div className="text-lg text-purple-600 hover:text-pink-800 transition">
+              <a
+                href={instagramLink}
+                target="_blank"
+                rel="noopener noreferrer"
+              >                
+                @tiamilenatransporte </a>
+              </div>
             </div>
           </div>
 

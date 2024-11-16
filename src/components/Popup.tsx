@@ -98,6 +98,8 @@ const Popup: React.FC<PopupProps> = ({ isOpen, setIsOpen }) => {
                 type="text"
                 name="phone"
                 placeholder="Telefone"
+                value={formData.phone}
+                onChange={handleInputChange}
                 className="w-full p-2 border rounded border-2 border-yellow-500"
                 required
               />
